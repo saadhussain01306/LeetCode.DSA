@@ -14,6 +14,9 @@
  * }
  */
 class Solution {
+
+     public int dif=0;
+    
     public int maxAncestorDiff(TreeNode root) {
         if(root==null){
             return 0;
@@ -27,7 +30,7 @@ class Solution {
 
     }
 
-    public int dif=0;
+    
 
     public void diff(TreeNode root,int max,int min){
        if(root==null){
