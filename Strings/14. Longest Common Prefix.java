@@ -16,5 +16,6 @@ class Solution {
         }
 
         return s1.substring(0,prefix);//inclusive of 0 and exclusive of prefix
+      // or return s2.substring(0,prefix);
     }
 }
