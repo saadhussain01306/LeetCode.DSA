@@ -6,13 +6,15 @@ class Solution {
         for (int i = 0; i < n - 2; i++) {
             for (int j = i + 1; j < n - 1; j++) {
                 int first=Math.abs(arr[i] - arr[j]);
+                if(first<=a){
                 for (int k = j + 1; k < n; k++) {
                     int sec=Math.abs(arr[j] - arr[k]);
                     int third=Math.abs(arr[i] - arr[k]);
-                    if(first<=a && sec<=b && third<=c){
+                    if(sec<=b && third<=c){
                         count++;
                     }
 
+                }
                 }
             }
         }
