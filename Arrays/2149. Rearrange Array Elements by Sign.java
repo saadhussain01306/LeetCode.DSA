@@ -36,3 +36,41 @@ class Solution {
         return resultArray;
     }
 }
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        List<Integer> positiveIntegers = new ArrayList<>();
+        List<Integer> negativeIntegers = new ArrayList<>();
+
+        // Separate positive and negative integers
+        for (int num : nums) {
+            if (num > 0) {
+                positiveIntegers.add(num);
+            } else {
+                negativeIntegers.add(num);
+            }
+        }
+
+        // Merge positive and negative integers following the conditions
+        int[] result = new int[nums.length];
+        int i = 0;
+        int j = 0;
+
+        // Start with a positive integer
+        boolean positiveTurn = true;
+
+        while (i < positiveIntegers.size() || j < negativeIntegers.size()) {
+            if (positiveTurn) {
+                result[i + j] = positiveIntegers.get(i++);
+            } else {
+                result[i + j] = negativeIntegers.get(j++);
+            }
+            positiveTurn = !positiveTurn;
+        }
+
+        return result;
+    }
+}
