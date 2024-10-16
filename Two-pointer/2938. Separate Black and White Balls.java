@@ -10,7 +10,7 @@ Return the minimum number of steps to group all the black balls to the right and
 
  
 
-Example 1:
+Example 1
 
 Input: s = "101"
 Output: 1
